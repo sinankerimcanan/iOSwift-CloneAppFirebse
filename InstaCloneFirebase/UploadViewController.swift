@@ -36,7 +36,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate, UI
             let imageReference = mediaFolder.child("\(uuid).jpeg")
             imageReference.putData(data) { (metadata,error) in
                 if error != nil {
-                    self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error!")
+                    self.makeAlert(titleInput: "Error!!", messageInput: error?.localizedDescription ?? "Error!")
                 } else {
                     imageReference.downloadURL { url, error in
                         if error == nil {
